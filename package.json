@@ -1,0 +1,39 @@
+{
+  "name": "co-ejs",
+  "description": "Embedded JavaScript templates for ES6",
+  "version": "1.0.0",
+  "author": {
+    "name": "nswbmw",
+    "email": "nswbmw1992@gmail.com"
+  },
+  "keywords": [
+    "template",
+    "engine",
+    "ejs",
+    "co"
+  ],
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "co": "*",
+    "co-wait": "*"
+  },
+  "main": "./lib/ejs.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nswbmw/co-ejs.git"
+  },
+  "scripts": {
+    "test": "mocha --require should --harmony ./test/ejs"
+  },
+  "bugs": {
+    "url": "https://github.com/nswbmw/co-ejs/issues"
+  },
+  "homepage": "https://github.com/nswbmw/co-ejs",
+  "maintainers": [
+    {
+      "name": "nswbmw",
+      "email": "nswbmw1992@gmail.com"
+    }
+  ]
+}
