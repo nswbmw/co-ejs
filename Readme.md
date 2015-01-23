@@ -70,6 +70,10 @@ time: 3015ms
 
 see [ejs](https://github.com/tj/ejs)
 
+### Test
+
+    npm test
+
 ### License
 
 MIT
