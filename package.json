@@ -1,7 +1,7 @@
 {
   "name": "co-ejs",
   "description": "Embedded JavaScript templates for ES6",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": {
     "name": "nswbmw",
     "email": "nswbmw1992@gmail.com"

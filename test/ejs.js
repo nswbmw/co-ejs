@@ -17,7 +17,7 @@ function fixture(name) {
 }
 
 function onerror(err) {
-  console.log(err);
+  console.log(err.stack);
 }
 
 /**
@@ -107,44 +107,29 @@ describe('ejs.render(str, options)', function(){
 })
 
 describe('ejs.renderFile(path, options, fn)', function(){
-  it('should render a file', function(done){
+  it('should render a file', function(){
     co(function*() {
-      yield *ejs.renderFile('test/fixtures/para.ejs', function(err, html){
-        if (err) return done(err);
-        html.should.equal('<p>hey</p>');
-        done();
-      });
+      (yield *ejs.renderFile('test/fixtures/para.ejs')).should.equal('<p>hey</p>');
     }).catch(onerror);
   })
 
-  it('should accept locals', function(done){
+  it('should accept locals', function(){
     var options = { name: 'tj', open: '{', close: '}' };
     co(function*() {
-      yield *ejs.renderFile('test/fixtures/user.ejs', options, function(err, html){
-        if (err) return done(err);
-        html.should.equal('<h1>tj</h1>');
-        done();
-      });
+      (yield *ejs.renderFile('test/fixtures/user.ejs', options)).should.equal('<h1>tj</h1>');
     }).catch(onerror);
   })
 
-  it('should not catch err threw by callback', function(done){
+  it('should not catch err threw by callback', function(){
     var options = { name: 'tj', open: '{', close: '}' };
     var counter = 0;
 
     co(function*() {
-      yield *ejs.renderFile('test/fixtures/user.ejs', options, function(err, html){
-        counter++;
-        if (err) {
-          err.message.should.not.equal('Exception in callback');
-          return done(err);
-        }
-        throw new Error('Exception in callback');
-      });
+      yield *ejs.renderFile('test/fixtures/user.ejs', options);
+      counter++;
     }).catch(function (err) {
       counter.should.equal(1);
       err.message.should.equal('Exception in callback');
-      done();
     });
   })
 })
