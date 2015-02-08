@@ -42,8 +42,9 @@ var str =
 '<h1><%= version %></h1>\n' +
 '<h2><%= now() %></h2>\n' +
 '<h3><%= ip() %></h3>\n' +
-'<h4><%- callback() %></h4>\n' +
-'<h5><%= callbackGen() %></h5>';
+'<% var cb = callback() %>' +
+'<h5><%= callbackGen() %></h5>\n' +
+'<h4><%- cb %></h4>';
 
 co(function* () {
   console.time('time');
