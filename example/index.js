@@ -1,14 +1,3 @@
-## co-ejs
-
-Koa ejs view render middleware.
-
-### Install
-
-    npm i co-ejs --save
-
-### Example
-
-```
 var path = require('path');
 
 var koa = require('koa');
@@ -24,7 +13,7 @@ var locals = {
   },
   ip: function *() {
     yield wait(1000);
-    return this.ip || '<p>127.0.0.1</p>';
+    return this.ip;
   },
   callback: function() {
     return function (cb) {
@@ -69,25 +58,3 @@ app.use(function *() {
 app.listen(3000, function () {
   console.log('listening on 3000.');
 });
-```
-Or you can checkout the example.
-
-### settings
-
-* root: view root directory.
-* layout: global layout file, default is `layout`, set `false` to disable layout.
-* viewExt: view file extension (default `html`).
-* cache: cache compiled templates (default `true`).
-* debug: debug flag (default `false`).
-* locals: global locals, can be function type, `this` in the function is koa's ctx.
-* filters: ejs custom filters.
-* open: open sequence (default `<%`).
-* close: close sequence (default `%>`).
-
-### Others
-
-see [ejs](https://github.com/tj/ejs)
-
-### License
-
-MIT
