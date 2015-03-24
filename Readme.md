@@ -84,6 +84,10 @@ Or you can checkout the example.
 * open: open sequence (default `<%`).
 * close: close sequence (default `%>`).
 
+### $this
+
+After version `1.4.0`, you could use `$this` in ejs template, like: `<%= $this.path %>`.
+
 ### Others
 
 see [ejs](https://github.com/tj/ejs)
