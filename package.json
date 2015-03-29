@@ -1,7 +1,7 @@
 {
   "name": "co-ejs",
   "description": "Koa ejs view render middleware.",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "author": {
     "name": "nswbmw",
     "email": "nswbmw1992@gmail.com"

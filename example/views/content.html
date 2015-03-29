@@ -1,5 +1,9 @@
 <div>
   <p>path: <%= $this.path %></p>
+  <p>2 + 3: 
+    <% var result = yield getSum(2, 3) %>
+    <%= result %>
+  </p>
   <p>version: <%= version %></p>
   <p>now: <%=: now() | format %></p>
   <p>ip: <%= ip %></p>

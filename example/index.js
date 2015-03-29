@@ -15,6 +15,10 @@ var locals = {
     yield wait(1000);
     return this.ip;
   },
+  getSum: function*(a, b) {
+    yield wait(2000);
+    return a + b;
+  },
   callback: function() {
     return function (cb) {
       cb(null, '<p>callback</p>');
