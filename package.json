@@ -1,7 +1,7 @@
 {
   "name": "co-ejs",
   "description": "Koa ejs view render middleware.",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "author": {
     "name": "nswbmw",
     "email": "nswbmw1992@gmail.com"
@@ -12,6 +12,9 @@
     "ejs",
     "co"
   ],
+  "dependencies": {
+    "merge-descriptors": "1.0.0"
+  },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
