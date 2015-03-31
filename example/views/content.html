@@ -7,7 +7,7 @@
   <p>version: <%= version %></p>
   <p>now: <%=: now() | format %></p>
   <p>ip: <%= ip %></p>
-  <% var cb = callback() %>
+  <% var cb = yield callback() %>
   <p>callbackGen: <%= callbackGen() %></p>
   <p>callback: <%- cb %></p>
   <p><%=: users | map : 'name' | join %></p>

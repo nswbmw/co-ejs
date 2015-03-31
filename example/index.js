@@ -21,13 +21,13 @@ var locals = {
   },
   callback: function() {
     return function (cb) {
-      cb(null, '<p>callback</p>');
+      cb(null, '<h1>callback</h1>');
     }
   },
   callbackGen: function() {
     return function* () {
       yield wait(3000);
-      return '<p>callbackGen</p>';
+      return '<h1>callbackGen</h1>';
     };
   },
   doNothing: function() {
