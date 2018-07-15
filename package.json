@@ -3,8 +3,7 @@
   "description": "Koa ejs view render middleware.",
   "version": "1.5.2",
   "author": {
-    "name": "nswbmw",
-    "email": "nswbmw1992@gmail.com"
+    "name": "nswbmw"
   },
   "keywords": [
     "template",
@@ -33,11 +32,5 @@
   "bugs": {
     "url": "https://github.com/nswbmw/co-ejs/issues"
   },
-  "homepage": "https://github.com/nswbmw/co-ejs",
-  "maintainers": [
-    {
-      "name": "nswbmw",
-      "email": "nswbmw1992@gmail.com"
-    }
-  ]
+  "homepage": "https://github.com/nswbmw/co-ejs"
 }
